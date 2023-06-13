@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>{{uye?.KullaniciAdi}} Adlı Öğrenciye Ait Ödevler</h1>
+  <h3 style="color: tomato;" *ngIf="odevler?.length==0">Henüz bu öğrenciye ait ödev girilmemiştir!</h3>
+  <div *ngFor="let Odev of odevler">
+        <h3>{{Odev.Baslik}}</h3>
+        <p>
+            <b>Kategori: </b>{{Odev.KategoriAdi}} &nbsp;
+            <b>Tarih: </b>{{Odev.Tarih}} &nbsp;
+            <b>Yazan: </b>{{Odev.UyeKadi}} &nbsp;
+            <b>Görüntülenme: </b>{{Odev.Goruntulenme}} &nbsp;
+            <a href="#" [routerLink]="['/odev',Odev.OdevId]">Ödevi incele</a>
+        </p>
+        <hr>
+    </div>
+    </div>

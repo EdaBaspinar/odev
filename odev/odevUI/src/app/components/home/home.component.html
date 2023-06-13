@@ -1,0 +1,13 @@
+<div class="container">
+    <div *ngFor="let Odev of odevler">
+        <h1>{{Odev.Baslik}}</h1>
+        <p>
+            <b>Ders: </b><a href="#" [routerLink]="['/kategori',Odev.KategoriId]">{{Odev.KategoriAdi}}</a> &nbsp;
+            <b>Tarih: </b>{{Odev.Tarih}} &nbsp;
+            <b>Yazan: </b> <a href="#" [routerLink]="['/uyeodev',Odev.UyeId]">{{Odev.UyeKadi}}</a> &nbsp;
+            <b>Görüntülenme: </b>{{Odev.Goruntulenme}} &nbsp;
+            <a href="#" [routerLink]="['/odev',Odev.OdevId]">Ödevi incele</a>
+        </p>
+        <hr>
+    </div>
+    </div>
